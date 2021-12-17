@@ -7,7 +7,7 @@ AFRAME.registerComponent('fade-on-video-time',
         var el = this.el;
         var data = this.data;
 
-        let videoSource = document.querySelector("#caresseSurLoceanVideo")
+        let videoSource = document.querySelector("#videoPlayer")
         var hasFaded = false;
 
         //el.setAttribute('text','opacity',0);

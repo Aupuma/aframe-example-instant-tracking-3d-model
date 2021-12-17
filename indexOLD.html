@@ -5,7 +5,7 @@
     <script src="assets/src/fade-on-video-time-component.js"></script>
     <script src="assets/src/model-emissive-component.js"></script>
     <script src="assets/src/model-emissive-color-component.js"></script>
-    <script src="assets/src/appManager.js"></script>
+    <script src="assets/src/appManager-component.js"></script>
   </head>
 
   <body>
@@ -20,7 +20,7 @@
         <a-asset-item id="LatoItalic" src="assets/fonts/Lato_Italic.json"></a-asset-item>
         <a-asset-item id="LatoItalicMSDF" src="assets/fonts/Lato-Italic-msdf.json"></a-asset-item>
 
-        <video id="caresseSurLoceanVideo" src="assets/CaresseSurlOcean.mp4" preload="auto"></video>
+        <video id="caresseSurLoceanVideo" src="https://test-aure.s3.eu-west-3.amazonaws.com/CaresseSurlOcean.mp4"></video>
 
         <a-mixin id="christmasText" text="align: center; anchor: center; wrapCount: 29.56; width: 0.46; color: #1B2900;  
         font: assets/fonts/Lato-Italic-msdf.json; font-image: assets/fonts/Lato-Italic.png; negate: false; opacity:1"
@@ -108,8 +108,8 @@
         
         </a-entity>
 
-        <a-entity id="christmasTree" scale="0 0 0" position="0.55828 -0.0145 -0.39539" gltf-model="#christmasTreeModel" 
-        animation="property:scale; to: 0.30197 0.30197 0.30197; dur:2000; startEvents:scaleUp"
+        <a-entity id="christmasTree" scale="0.3 0.3 0.3" position="0.55828 -0.0145 -0.39539" gltf-model="#christmasTreeModel" 
+        
         ></a-entity>
 
       </a-entity>

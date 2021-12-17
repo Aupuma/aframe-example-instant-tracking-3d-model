@@ -13,7 +13,7 @@
     <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
 
     <meta charset="utf-8" />
-    <title>Re-evoluciona wishes you a Merry Christmas</title>
+    <title>Re-evoluciona te desea Feliz Navidad</title>
     <style>
         html,
         body {
@@ -47,7 +47,7 @@
     <a-scene loading-screen="dotsColor: white; backgroundColor: #8ED108" renderer='precision: high; sortObjects: true'>
         <a-assets>
             <a-asset-item id="christmasTreeModel" src="assets/models/christmasTree.glb"></a-asset-item>
-            <a-asset-item id="leftPageModel" src="assets/models/HojaIzquierdaENG.glb"></a-asset-item>
+            <a-asset-item id="leftPageModel" src="assets/models/HojaIzquierda.glb"></a-asset-item>
             <a-asset-item id="rightPageModel" src="assets/models/HojaDerecha.glb"></a-asset-item>
             <a-asset-item id="LightbulbModel" src="assets/models/edisonLight.glb"></a-asset-item>
     
@@ -119,38 +119,38 @@
                     geometry="height: 0.9; width: 1.6" src="#caresseSurLoceanVideo"></a-video>
                     
                     <a-entity id="LargeText" mixin="christmasText" position="-0.26862 -0.10846 0"
-                    text="value:“The difference between where you were yesterday and where you will be tomorrow is what you believe, say and do today”"></a-entity>
+                    text="value:“La diferencia entre dónde estuviste ayer y dónde vas a estar mañana, es lo que pienses, digas y hagas este día.”"></a-entity>
                     
                 </a-entity>
                 
                 <a-entity id="rightPage" rotation="-90 0 0" gltf-model="#rightPageModel">
 
                     <a-entity id="PropósitoText" position="0.36479 0.12995 0" mixin="christmasText"
-                        text="value:Purpose; opacity:0" fade-on-video-time="6">
+                        text="value:Propósito; opacity:0" fade-on-video-time="6">
                     </a-entity>
                     <a-entity id="DisciplinaText" position="0.11272 -0.1503 0" mixin="christmasText"
-                        text="value:Discipline; opacity:0" fade-on-video-time="16">
+                        text="value:Disciplina; opacity:0" fade-on-video-time="16">
                     </a-entity>
                     <a-entity id="CohesiónText" position="0.15656 0.16752 0" mixin="christmasText"
-                        text="value:Cohesion; opacity:0" fade-on-video-time="24">
+                        text="value:Cohesión; opacity:0" fade-on-video-time="24">
                     </a-entity>
                     <a-entity id="IlusiónText" position="0.34913 -0.07672 0" mixin="christmasText"
-                        text="value:Excitement; opacity:0" fade-on-video-time="33">
+                        text="value:Ilusión; opacity:0" fade-on-video-time="33">
                     </a-entity>
                     <a-entity id="PerseveranciaText" position="0.15186 0.07202 0" mixin="christmasText"
-                        text="value:Perseverance; opacity:0" fade-on-video-time="41">
+                        text="value:Perseverancia; opacity:0" fade-on-video-time="41">
                     </a-entity>
                     <a-entity id="ConfianzaText" position="0.31625 -0.15969 0" mixin="christmasText"
-                        text="value:Trust; opacity:0" fade-on-video-time="62">
+                        text="value:Confianza; opacity:0" fade-on-video-time="62">
                     </a-entity>
                     <a-entity id="EmpatíaText" position="0.36948 0.02035 0" mixin="christmasText"
-                        text="value:Empathy; opacity:0" fade-on-video-time="96">
+                        text="value:Empatía; opacity:0" fade-on-video-time="96">
                     </a-entity>
                     <a-entity id="InfluenciaText" position="0.22232 -0.24267 0" mixin="christmasText"
-                        text="value:Influence; opacity:0" fade-on-video-time="110">
+                        text="value:Influencia; opacity:0" fade-on-video-time="110">
                     </a-entity>
                     <a-entity id="EsperanzaText" position="0.15969 -0.03914 0" mixin="christmasText"
-                        text="value:Hope; opacity:0" fade-on-video-time="130">
+                        text="value:Esperanza; opacity:0" fade-on-video-time="130">
                     </a-entity>
                     
                 </a-entity>
@@ -159,7 +159,7 @@
                 animation="property:scale; to: 0.30197 0.30197 0.30197; dur:2000; startEvents:scaleUp"
                 ></a-entity>
 
-                <a-box id="WebsiteButton" rotation="0 -90.00021045914971 25.650174572416695" position="0 0.16001 -0.62367" scale="0 0 0" website-button="https://www.re-evoluciona.com/en/"
+                <a-box id="WebsiteButton" rotation="0 -90.00021045914971 25.650174572416695" position="0 0.16001 -0.62367" scale="0 0 0" website-button="https://www.re-evoluciona.com/"
                 animation="property: scale; to:0.0391 0.1564 0.1564; dur:500; startEvents:scale; easing: easeOutQuad" color="white">
                     <a-image id="logo" scale="1 1 0.88398" position="0.50111 0 0" rotation="0 90 0" src="#reevolucionaLogo"></a-image>
                 </a-box>
@@ -171,7 +171,7 @@
     </a-scene>
 
     <!-- Some UI for the user to tap to indicate they're happy with the placement -->
-    <div id="zappar-placement-ui">Tap to place the card</div>
+    <div id="zappar-placement-ui">Pulsa para colocar la tarjeta</div>
 
     <script src="assets/src/appManager.js"></script>
 </body>
