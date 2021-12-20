@@ -11,9 +11,10 @@
     <script src="assets/src/color-fix-component.js"></script>
     <script src="assets/src/website-button-component.js"></script>
     <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
+    <script src="assets/src/texture-fixer.js"></script>
 
     <meta charset="utf-8" />
-    <title>Re-evoluciona wishes you a Merry Christmas</title>
+    <title>Re-evoluciona te desea Feliz Navidad</title>
     <style>
         html,
         body {
@@ -46,8 +47,8 @@
 
     <a-scene loading-screen="dotsColor: white; backgroundColor: #8ED108" renderer='precision: high; sortObjects: true'>
         <a-assets>
-            <a-asset-item id="christmasTreeModel" src="assets/models/christmasTreeOptimized.glb"></a-asset-item>
-            <a-asset-item id="leftPageModel" src="assets/models/HojaIzquierdaENG.glb"></a-asset-item>
+            <!-- <a-asset-item id="christmasTreeModel"  src="assets/models/christmasTreeOptimized.glb"></a-asset-item> -->
+            <a-asset-item id="leftPageModel" src="assets/models/HojaIzquierda.glb"></a-asset-item>
             <a-asset-item id="rightPageModel" src="assets/models/HojaDerecha.glb"></a-asset-item>
             <a-asset-item id="LightbulbModel" src="assets/models/lightBulbOptimized.glb"></a-asset-item>
     
@@ -55,7 +56,7 @@
             <a-asset-item id="LatoItalic" src="assets/fonts/Lato_Italic.json"></a-asset-item>
             <a-asset-item id="LatoItalicMSDF" src="assets/fonts/Lato-Italic-msdf.json"></a-asset-item>
     
-            <video id="caresseSurLoceanVideo" src="https://test-aure.s3.eu-west-3.amazonaws.com/CaresseSurlOcean.mp4" crossorigin="anonymous"></video>
+            <video id="caresseSurLoceanVideo" src="https://test-aure.s3.eu-west-3.amazonaws.com/CaresseSurlOcean.mp4" preload="false" crossorigin="anonymous"></video>
             <img id="backgroundSky" src="assets/media/hdrBackground.jpg">
             <img id="reevolucionaLogo" src="assets/media/reevolucionaLogo.png">
     
@@ -64,7 +65,7 @@
             animation="property: components.text.material.uniforms.opacity.value; to: 1; dur: 2000; startEvents:fadeIn; autoplay:false">
             </a-mixin>
     
-            <a-mixin id="christmasLightbulb" scale="0 0 0" gltf-model="#LightbulbModel" model-emissive="0" 
+            <a-mixin id="christmasLightbulb" scale="0 0 0" gltf-model="#LightbulbModel" model-emissive="0"
             animation__initialScaling="property: scale; to:0.07 0.07 0.07; dur:500; startEvents:scale; autoplay:false; easing: easeOutQuad"
             animation__lightUp="property: model-emissive; to:10; dur: 4000; startEvents:fadeIn; autoplay:false"></a-mixin>
         </a-assets>
@@ -72,7 +73,7 @@
         <!-- Ask user for camera permissions, display some text if permission is denied -->
         <a-entity zappar-permissions-ui id="permissions"></a-entity>
         <!-- shows a full-page dialog that informs the user they're using an unsupported browser -->
-        <a-entity zappar-compatibility-ui id="compatibility"></a-entity>
+        <!-- <a-entity zappar-compatibility-ui id="compatibility"></a-entity> -->
 
         <a-camera zappar-camera cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 20000; objects: .clickable"/>
 
@@ -85,31 +86,31 @@
 
                 <a-entity id="lights" position="0 0.03715 0">
                     <a-entity id="light1"  rotation="-6.246958840311366 12.162175117241985 -0.10255944532841735" position="0.65847 -0.01567 -0.09544" mixin="christmasLightbulb"
-                    fade-on-video-time="6" model-emissive-color="green" class="lightBulb"></a-entity>
+                    fade-on-video-time="6" model-emissive-color="#00ff00" class="lightBulb"></a-entity>
 
                     <a-entity id="light2"  rotation="-3.7322470774821825 -106.42060790980398 0.8961059915846076" position="-0.23741 -0.00735 -0.44265" mixin="christmasLightbulb"
-                    fade-on-video-time="16" model-emissive-color="yellow"></a-entity>
+                    fade-on-video-time="16" model-emissive-color="#ffff00"></a-entity>
 
                     <a-entity id="light3"  rotation="-7.110406237573517 -46.92180567444364 -6.40280336058695" position="-0.33651 -0.01825 0.40432" mixin="christmasLightbulb"
-                    fade-on-video-time="24" model-emissive-color="red"></a-entity>
+                    fade-on-video-time="24" model-emissive-color="#ff0000"></a-entity>
 
                     <a-entity id="light4"  rotation="-0.36612003108859603 -152.97113693300284 0.330596647790485" position="-0.64115 -0.00413 -0.13621" mixin="christmasLightbulb"
-                    fade-on-video-time="33" model-emissive-color="blue"></a-entity>
+                    fade-on-video-time="33" model-emissive-color="#0000ff"></a-entity>
 
                     <a-entity id="light5"  rotation="-7.181453004169739 46.59865747798985 -1.721165216572993" position="0.22287 -0.01438 0.39581" mixin="christmasLightbulb"
-                    fade-on-video-time="41" model-emissive-color="green"></a-entity>
+                    fade-on-video-time="41" model-emissive-color="#00ff00"></a-entity>
 
                     <a-entity id="light6"  rotation="-3.989505127495922 150.23010684109698 -6.158723339861219" position="0.60162 -0.00546 0.45922" mixin="christmasLightbulb"
-                    fade-on-video-time="62" model-emissive-color="yellow"></a-entity>
+                    fade-on-video-time="62" model-emissive-color="#ffff00"></a-entity>
 
                     <a-entity id="light7"  rotation="-2.9472948981529545 123.56980767586464 -1.83747564898455" position="0.03876 -0.00904 -0.41435" mixin="christmasLightbulb"
-                    fade-on-video-time="96" model-emissive-color="red"></a-entity>
+                    fade-on-video-time="96" model-emissive-color="#ff0000"></a-entity>
 
                     <a-entity id="light8"  rotation="-6.358112652566746 154.41499057673252 3.646303408212559" position="-0.70382 -0.01554 0.20986" mixin="christmasLightbulb"
-                    fade-on-video-time="110" model-emissive-color="blue"></a-entity>
+                    fade-on-video-time="110" model-emissive-color="#0000ff"></a-entity>
 
                     <a-entity id="light9"  rotation="-6.920184249590083 -124.94719821535915 1.834037902213765" position="0.04035 -0.01992 0.53262" mixin="christmasLightbulb"
-                    fade-on-video-time="130" model-emissive-color="green"></a-entity>
+                    fade-on-video-time="130" model-emissive-color="#00ff00"></a-entity>
                 </a-entity>
                 
                 <a-entity id="leftPage" position="0 0 0" rotation="90 90 -90" gltf-model="#leftPageModel"
@@ -119,47 +120,47 @@
                     geometry="height: 0.9; width: 1.6" src="#caresseSurLoceanVideo"></a-video>
                     
                     <a-entity id="LargeText" mixin="christmasText" position="-0.26862 -0.10846 0"
-                    text="value:“The difference between where you were yesterday and where you will be tomorrow is what you believe, say and do today”"></a-entity>
+                    text="value:“La diferencia entre dónde estuviste ayer y dónde vas a estar mañana, es lo que pienses, digas y hagas este día.”"></a-entity>
                     
                 </a-entity>
                 
                 <a-entity id="rightPage" rotation="-90 0 0" gltf-model="#rightPageModel">
 
                     <a-entity id="PropósitoText" position="0.36479 0.12995 0" mixin="christmasText"
-                        text="value:Purpose; opacity:0" fade-on-video-time="6">
+                        text="value:Propósito; opacity:0" fade-on-video-time="6">
                     </a-entity>
                     <a-entity id="DisciplinaText" position="0.11272 -0.1503 0" mixin="christmasText"
-                        text="value:Discipline; opacity:0" fade-on-video-time="16">
+                        text="value:Disciplina; opacity:0" fade-on-video-time="16">
                     </a-entity>
                     <a-entity id="CohesiónText" position="0.15656 0.16752 0" mixin="christmasText"
-                        text="value:Cohesion; opacity:0" fade-on-video-time="24">
+                        text="value:Cohesión; opacity:0" fade-on-video-time="24">
                     </a-entity>
                     <a-entity id="IlusiónText" position="0.34913 -0.07672 0" mixin="christmasText"
-                        text="value:Excitement; opacity:0" fade-on-video-time="33">
+                        text="value:Ilusión; opacity:0" fade-on-video-time="33">
                     </a-entity>
                     <a-entity id="PerseveranciaText" position="0.15186 0.07202 0" mixin="christmasText"
-                        text="value:Perseverance; opacity:0" fade-on-video-time="41">
+                        text="value:Perseverancia; opacity:0" fade-on-video-time="41">
                     </a-entity>
                     <a-entity id="ConfianzaText" position="0.31625 -0.15969 0" mixin="christmasText"
-                        text="value:Trust; opacity:0" fade-on-video-time="62">
+                        text="value:Confianza; opacity:0" fade-on-video-time="62">
                     </a-entity>
                     <a-entity id="EmpatíaText" position="0.36948 0.02035 0" mixin="christmasText"
-                        text="value:Empathy; opacity:0" fade-on-video-time="96">
+                        text="value:Empatía; opacity:0" fade-on-video-time="96">
                     </a-entity>
                     <a-entity id="InfluenciaText" position="0.22232 -0.24267 0" mixin="christmasText"
-                        text="value:Influence; opacity:0" fade-on-video-time="110">
+                        text="value:Influencia; opacity:0" fade-on-video-time="110">
                     </a-entity>
                     <a-entity id="EsperanzaText" position="0.15969 -0.03914 0" mixin="christmasText"
-                        text="value:Hope; opacity:0" fade-on-video-time="130">
+                        text="value:Esperanza; opacity:0" fade-on-video-time="130">
                     </a-entity>
                     
                 </a-entity>
 
-                <a-entity id="christmasTree" scale="0 0 0" position="0.55828 -0.0145 -0.39539" gltf-model="#christmasTreeModel"
+                <a-entity id="christmasTree" scale="0 0 0" position="0.55828 -0.0145 -0.39539" gltf-model="assets/models/christmasTreeOptimized.glb" 
                 animation="property:scale; to: 0.30197 0.30197 0.30197; dur:2000; startEvents:scaleUp"
                 ></a-entity>
 
-                <a-box id="WebsiteButton" rotation="0 -90.00021045914971 25.650174572416695" position="0 0.16001 -0.62367" scale="0 0 0" website-button="https://www.re-evoluciona.com/en/"
+                <a-box id="WebsiteButton" rotation="0 -90.00021045914971 25.650174572416695" position="0 0.16001 -0.62367" scale="0 0 0" website-button="https://www.re-evoluciona.com/"
                 animation="property: scale; to:0.0391 0.1564 0.1564; dur:500; startEvents:scale; easing: easeOutQuad" color="white">
                     <a-image id="logo" scale="1 1 0.88398" position="0.50111 0 0" rotation="0 90 0" src="#reevolucionaLogo"></a-image>
                 </a-box>
@@ -171,7 +172,7 @@
     </a-scene>
 
     <!-- Some UI for the user to tap to indicate they're happy with the placement -->
-    <div id="zappar-placement-ui">Tap to place the card</div>
+    <div id="zappar-placement-ui">Pulsa para colocar la tarjeta</div>
 
     <script src="assets/src/appManager.js"></script>
 </body>

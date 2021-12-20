@@ -1,5 +1,5 @@
 AFRAME.registerComponent('model-emissive-color', {
-    schema: {default: '#FF0'},
+    schema: {type:'color', default: '#FF0'},
   
     init: function () 
     {
